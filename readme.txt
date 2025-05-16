@@ -23,3 +23,31 @@ debido a que Selenium tiene el selector ubicado de foram predefinida en el "body
 
 -   Selecciona Formato (Tuvo complejidad debido a que son 2 cuadros, uno bugeado que se mantiene fuera de vista, y otro donde está el contenido interactuable)
 -   Selecciona SubFormato, espera a que la tabla se cargue y recupera todo su contenido
+
+
+Esta vez se subira un proyecto modular con ofuscacion pyarmor, lo cual implica unos comandos ligeramente diferentes como ->
+
+/*
+ DEPRECADO O NO FUNCIONAL
+    pyarmor init --src=. --entry "main.py"->Nombre del ejecutable del proyecto "mi_proyecto_protegido -> Nombre de la carpeta donde se duplicara la estructura de carpetas con cnfiguracion pyarmor"
+    *TODO ESTO DENTRO DEL DIRACTORIO DEL PROYECTO*
+
+
+    En la ruta del proyecto ejecutar pyarmor cfg init -> Me crea un archivo de configuracion del pyarmor, (pyarmor_config.cfg)
+    en el cual tengo que marcar los parametros que antes se marcaban en el BASH
+    Si no se crea hay que crearlo manual
+
+    Ejcecutar el comando pyarmor gen y pasarle algunos argumentos como 
+
+    ->  pyarmor gen -r -O dist main.py
+
+
+    | Opción    | Significado                                       |
+    | --------- | ------------------------------------------------- |
+    | `gen`     | Comando para generar código protegido/ofuscado    |
+    | `main.py` | Punto de entrada del programa                     |
+    | `-r`      | Busca y protege recursivamente módulos importados |
+    | `-O dist` | Carpeta donde se guardará el código ofuscado      |
+
+*\
+    pyarmor gen -r {Nombre de los archivos-Incluye extension} separados por espacio 
